@@ -26,7 +26,7 @@ export const AutoProvider = ({children}) =>{
 
      const checkAuth = async () =>{
         try {
-          const {data} =   await axios.post("/api/auth/check") // for api call to check if user auth 
+          const {data} =   await axios.get("/api/auth/check") // for api call to check if user auth 
           if(data.success){
                 setAuthUser(data.user);
                 connectSocket(data.user);

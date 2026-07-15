@@ -20,9 +20,9 @@ function Sidebar() {     // {seletedUser , setSelectedUser}  this i for selected
     <div className={`bg-[#8185b2]/10 h-full p-5 rounded-r-xl overflow-y-scroll text-white ${selectedUser ?'max-md:hidden':''}`}>
        <div className='pb-5'>
           <div className='flex justify-between items-center'>
-             <img src={assets.logo} alt="logo" srcset="" className='max-w-40' />
+             <img src={assets.logo} alt="logo" srcSet="" className='max-w-40' />
              <div className='relative py-2 group '>
-                <img src={assets.menu_icon} alt="Menu" srcset="" className='max-h-5 cursor-pointer' />
+                <img src={assets.menu_icon} alt="Menu" srcSet="" className='max-h-5 cursor-pointer' />
                  <div className=' absolute top-full right-0 z-20 w-32 p-5 rounded-md bg-[#282142] border border-gray-600
                  text-gray-600 hidden group-hover:block'>
                      <p onClick={()=>navigate('/profile')} className='cursor-pointer text-sm'>Edit Profile</p>
@@ -33,7 +33,7 @@ function Sidebar() {     // {seletedUser , setSelectedUser}  this i for selected
           </div>
          {/*  */}
           <div className='bg-[#282142] rounded-full  flex items-center gap-2 py-3 px-4 mt-5'>
-            <img src={assets.search_icon} alt="Search " srcset="" className='w-3' />
+            <img src={assets.search_icon} alt="Search " srcSet="" className='w-3' />
 
             <input onChange={(e)=>setInput(e.target.value)} type="text" className='bg-transparent border-none outline-none text-white text-xs
              placeholder-[#c8c8c8] flex-1'  placeholder='Search User'/>
