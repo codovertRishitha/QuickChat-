@@ -3,6 +3,7 @@ import {Navigate, Route , Routes , } from 'react-router-dom'
 import HomePages from './pages/HomePages'
 import LoginPages from './pages/LoginPages'
 import ProfilePage from './pages/ProfilePage'
+import bgImage from "./assets/bgImage.svg";
 
 import {Toaster} from 'react-hot-toast'
 import { AutoContext } from './context/AutoContext'
@@ -10,8 +11,12 @@ import { AutoContext } from './context/AutoContext'
 function App() {
   const {authUser} = useContext(AutoContext)
   return (
-    <div className="bg-[url('./src/assets/bgImage.svg')] bg-contain">
-      <Toaster/>
+    <div
+  className="bg-contain"
+  style={{
+    backgroundImage: `url(${bgImage})`,
+  }}
+>  <Toaster/>
 
       <Routes>
         <Route  path='/'  element={authUser ?  <HomePages/> : <Navigate to="/login" />} />
