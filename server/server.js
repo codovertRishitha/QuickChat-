@@ -60,11 +60,13 @@ app.use(cors());
 // import user routes 
 
 // routes setup 
-app.use("/api/status", (req , res ) => res.send("Server is live"))
+app.get("/api/status", (req , res ) => res.send("Server is live"))
 app.use("/api/auth" , userRoutes)
 
 app.use("/api/messages" , messageRoutes)
-
+app.get("/", (req, res) => {
+    res.send("QuickChat Backend is Running 🚀");
+});
 // connect to mongo db 
 
 await connectDB();
